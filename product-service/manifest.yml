@@ -1,0 +1,6 @@
+applications:
+- name: Product Microservices
+path: target/product-service-0.0.1-SNAPSHOT.jar
+domain: cfapps.io
+memory: 670m
+instances: 1

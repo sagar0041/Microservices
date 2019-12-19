@@ -1,0 +1,30 @@
+zuul:
+  prefix: /apigateway
+  routes:
+    resource:
+    PRODUCT-SERVICE:
+      path: /amit/**
+      serviceId: PRODUCT-SERVICE
+    SHOPPINGCART-SERVICE:
+      path: /cart/**
+      serviceId: SHOPPINGCART-SERVICE
+
+server:
+  port: 8093
+
+spring:
+  application:
+    name: zuul-server
+
+management:
+endpoint:
+  routes:
+    enabled: true
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: true
